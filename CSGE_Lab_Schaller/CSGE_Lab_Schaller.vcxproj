@@ -129,7 +129,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Lab.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="resource_manager.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="texture3d.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lab.h" />
+    <ClInclude Include="resource_manager.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="texture3d.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
