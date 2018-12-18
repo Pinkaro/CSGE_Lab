@@ -2,28 +2,39 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "resource_manager.h"
+#include "stb_image.h"
+#include "Camera.h"
+
+// ######### TEMP INCLUDES ##########
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Lab
 {
 public:
-	GLboolean              Keys[1024];
-	GLuint                 Width, Height;
+	//static GLboolean	Keys[1024];
+	static GLuint		Width, Height;
+	static Camera*		Cam;
+	static bool			FirstMouseMovement;
+	static float		DeltaTime, LastFrameTime;
+	static float		LastMouseX, LastMouseY;
 
-	// Constructor/Destructor
-	Lab(GLuint width, GLuint height);
-	~Lab();
+	// Destructor
+	static void Clear();
 
 	// Initialize game state (load all shaders/textures/levels)
-	void Init();
+	static void Init(GLuint width, GLuint height);
 
 	// GameLoop
-	void ProcessInput();
-	void Update();
-	void Render();
+	static void ProcessInput();
+	static void Update();
+	static void Render();
 
 private:
-	GLFWwindow* window;
+	static GLFWwindow* window;
 
-	int DrawWindow();
-	
+	Lab();
+	static int DrawWindow();
 };

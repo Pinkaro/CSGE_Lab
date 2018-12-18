@@ -1,12 +1,10 @@
-
 #include "Lab.h"
 
 int main()
 {
-	Lab* lab = new Lab(800, 600);
-	lab->Init();
-	lab->Render();
-
+	Lab::Init(800, 600);
+	Lab::Render();
+	Lab::Clear();
 	glfwTerminate();
 
 	return 0;
